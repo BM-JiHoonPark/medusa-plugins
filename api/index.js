@@ -10,6 +10,7 @@ const linkedin_1 = __importDefault(require("../auth-strategies/linkedin"));
 const firebase_1 = __importDefault(require("../auth-strategies/firebase"));
 const auth0_1 = __importDefault(require("../auth-strategies/auth0"));
 const azure_oidc_1 = __importDefault(require("../auth-strategies/azure-oidc"));
+const kakao_1 = __importDefault(require("../auth-strategies/kakao"));
 function default_1(rootDirectory, pluginOptions) {
     const configModule = (0, config_1.default)(rootDirectory);
     return loadRouters(configModule, pluginOptions);
@@ -23,6 +24,7 @@ function loadRouters(configModule, options) {
     routers.push(...firebase_1.default.getRouter(configModule, options));
     routers.push(...auth0_1.default.getRouter(configModule, options));
     routers.push(...azure_oidc_1.default.getRouter(configModule, options));
+    routers.push(...kakao_1.default.getRouter(configModule, options));
     return routers;
 }
 //# sourceMappingURL=index.js.map
