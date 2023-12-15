@@ -7,6 +7,7 @@ const facebook_1 = require("../auth-strategies/facebook");
 const linkedin_1 = require("../auth-strategies/linkedin");
 const auth0_1 = require("../auth-strategies/auth0");
 const azure_oidc_1 = require("../auth-strategies/azure-oidc");
+const kakao_1 = require("../auth-strategies/kakao");
 exports.CUSTOMER_METADATA_KEY = 'useSocialAuth';
 exports.AUTH_PROVIDER_KEY = 'authProvider';
 exports.EMAIL_VERIFIED_KEY = 'emailVerified';
@@ -35,6 +36,10 @@ exports.strategyNames = {
     azure_oidc: {
         admin: azure_oidc_1.AZURE_ADMIN_STRATEGY_NAME,
         store: azure_oidc_1.AZURE_STORE_STRATEGY_NAME,
+    },
+    kakao: {
+        admin: kakao_1.KAKAO_ADMIN_STRATEGY_NAME,
+        store: kakao_1.KAKAO_STORE_STRATEGY_NAME,
     },
 };
 //# sourceMappingURL=index.js.map

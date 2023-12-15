@@ -6,6 +6,7 @@ import { FacebookAuthOptions } from '../auth-strategies/facebook';
 import { LinkedinAuthOptions } from '../auth-strategies/linkedin';
 import { Auth0Options } from '../auth-strategies/auth0';
 import { AzureAuthOptions } from '../auth-strategies/azure-oidc';
+import { KakaoAuthOptions } from '../auth-strategies/kakao';
 export declare const CUSTOMER_METADATA_KEY = "useSocialAuth";
 export declare const AUTH_PROVIDER_KEY = "authProvider";
 export declare const EMAIL_VERIFIED_KEY = "emailVerified";
@@ -33,6 +34,7 @@ export declare type ProviderOptions = {
     firebase?: FirebaseAuthOptions;
     auth0?: Auth0Options;
     azure_oidc?: AzureAuthOptions;
+    kakao?: KakaoAuthOptions;
 };
 export declare type StrategyErrorIdentifierType = keyof ProviderOptions;
 export declare type StrategyNames = {
