@@ -9,6 +9,7 @@ const linkedin_1 = __importDefault(require("../auth-strategies/linkedin"));
 const firebase_1 = __importDefault(require("../auth-strategies/firebase"));
 const auth0_1 = __importDefault(require("../auth-strategies/auth0"));
 const azure_oidc_1 = __importDefault(require("../auth-strategies/azure-oidc"));
+const kakao_1 = __importDefault(require("../auth-strategies/kakao"));
 async function authStrategiesLoader(container, authOptions) {
     const configModule = container.resolve('configModule');
     google_1.default.load(container, configModule, authOptions);
@@ -17,6 +18,7 @@ async function authStrategiesLoader(container, authOptions) {
     firebase_1.default.load(container, configModule, authOptions);
     auth0_1.default.load(container, configModule, authOptions);
     azure_oidc_1.default.load(container, configModule, authOptions);
+    kakao_1.default.load(container, configModule, authOptions);
 }
 exports.default = authStrategiesLoader;
 //# sourceMappingURL=index.js.map
